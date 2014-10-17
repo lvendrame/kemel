@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kemel.Orm</RootNamespace>
+    <AssemblyName>Kemel.Orm</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Business.cs" />
+    <Compile Include="Base\Dal.cs" />
+    <Compile Include="Base\IColumnDefinition.cs" />
+    <Compile Include="Base\ITableDefinition.cs" />
+    <Compile Include="Base\ITransactable.cs" />
+    <Compile Include="Configuration\CredentialCollection.cs" />
+    <Compile Include="Configuration\CredentialElement.cs" />
+    <Compile Include="Configuration\DigiOrmSection.cs" />
+    <Compile Include="Constants\ConstraintTypes.cs" />
+    <Compile Include="Constants\DataTypes.cs" />
+    <Compile Include="Constants\DDL.cs" />
+    <Compile Include="Constants\DML.cs" />
+    <Compile Include="Constants\Functions.cs" />
+    <Compile Include="Constants\Join.cs" />
+    <Compile Include="Constants\Comparisons.cs" />
+    <Compile Include="Constants\Prefix.cs" />
+    <Compile Include="Constants\Punctuation.cs" />
+    <Compile Include="Constants\StoreProceduresPrefix.cs" />
+    <Compile Include="Constants\Sufix.cs" />
+    <Compile Include="DataBase\BusinessDataBase.cs" />
+    <Compile Include="DataBase\CodeDom\BaseGen.cs" />
+    <Compile Include="DataBase\CodeDom\BusinessGen.cs" />
+    <Compile Include="DataBase\CodeDom\DalGen.cs" />
+    <Compile Include="DataBase\CodeDom\EntityGen.cs" />
+    <Compile Include="DataBase\CodeDom\GenClasses.cs" />
+    <Compile Include="DataBase\CodeDom\GenConfig.cs" />
+    <Compile Include="DataBase\CodeDom\GenItem.cs" />
+    <Compile Include="DataBase\CodeDom\GenType.cs" />
+    <Compile Include="DataBase\CodeDom\Languages.cs" />
+    <Compile Include="DataBase\CodeDom\SchemaGen.cs" />
+    <Compile Include="DataBase\DalDataBase.cs" />
+    <Compile Include="DataBase\T_Table_Entity.cs" />
+    <Compile Include="DataBase\T_Column_Entity.cs" />
+    <Compile Include="Data\ITypeConverter.cs" />
+    <Compile Include="Data\OrmCommand.cs" />
+    <Compile Include="Data\OrmConnection.cs" />
+    <Compile Include="Data\OrmTransaction.cs" />
+    <Compile Include="Entity\Attributes\AllowNullAttribute.cs" />
+    <Compile Include="Entity\Attributes\ColumnAliasAttribute.cs" />
+    <Compile Include="Entity\Attributes\ColumnType.cs" />
+    <Compile Include="Entity\Attributes\ColumnUseTypeAttribute.cs" />
+    <Compile Include="Entity\Attributes\ConverterAttribute.cs" />
+    <Compile Include="Entity\Attributes\IsNotColumnAttribute.cs" />
+    <Compile Include="Entity\Attributes\KeyProviderAttribute.cs" />
+    <Compile Include="Entity\Attributes\LogicalExclusionColumnAttribute.cs" />
+    <Compile Include="Entity\Attributes\OwnerAttribute.cs" />
+    <Compile Include="Entity\Attributes\SequenceAttribute.cs" />
+    <Compile Include="Entity\Attributes\TextValueAttribute.cs" />
+    <Compile Include="Entity\Attributes\ForeignKeyAttribute.cs" />
+    <Compile Include="Entity\Attributes\IdentityAttribute.cs" />
+    <Compile Include="Entity\Attributes\IgnorePropertyAttribute.cs" />
+    <Compile Include="Entity\Attributes\MaxLengthAttribute.cs" />
+    <Compile Include="Entity\Attributes\OrderByAttribute.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Interval.cs" />
+    <Compile Include="NQuery\Builder\BaseWriter.cs" />
+    <Compile Include="NQuery\Builder\DeleteWriter.cs" />
+    <Compile Include="NQuery\Builder\EntityCrudBuilder.cs" />
+    <Compile Include="NQuery\Builder\FunctionWriter.cs" />
+    <Compile Include="NQuery\Builder\InsertWriter.cs" />
+    <Compile Include="NQuery\Builder\QueryBuilder.cs" />
+    <Compile Include="NQuery\Builder\SelectWriter.cs" />
+    <Compile Include="NQuery\Builder\UpdateWriter.cs" />
+    <Compile Include="NQuery\Storage\Column\ColumnConstantDefinition.cs" />
+    <Compile Include="NQuery\Storage\Column\ColumnAliasDefinition.cs" />
+    <Compile Include="NQuery\Storage\Column\ColumnConcatDefinition.cs" />
+    <Compile Include="NQuery\Storage\Column\ColumnFunctionDefinition.cs" />
+    <Compile Include="NQuery\Storage\Column\ColumnNameDefinition.cs" />
+    <Compile Include="NQuery\Storage\Column\ColumnUnknowTableDefinition.cs" />
+    <Compile Include="NQuery\Storage\Column\StoredColumn.cs" />
+    <Compile Include="NQuery\Storage\Constraint\ComparisonOperator.cs" />
+    <Compile Include="NQuery\Storage\Constraint\ConditionExpression.cs" />
+    <Compile Include="NQuery\Storage\Constraint\ConstraintBase.cs" />
+    <Compile Include="NQuery\Storage\Constraint\StoredConstraint.cs" />
+    <Compile Include="NQuery\Storage\Executer.cs" />
+    <Compile Include="NQuery\Storage\Function\Aggregated\FunctionAvg.cs" />
+    <Compile Include="NQuery\Storage\Function\Aggregated\FunctionCount.cs" />
+    <Compile Include="NQuery\Storage\Function\Aggregated\FunctionMax.cs" />
+    <Compile Include="NQuery\Storage\Function\Aggregated\FunctionMin.cs" />
+    <Compile Include="NQuery\Storage\Function\Aggregated\FunctionSum.cs" />
+    <Compile Include="NQuery\Storage\Function\Scalar\FunctionConvert.cs" />
+    <Compile Include="NQuery\Storage\Function\SequenciaParamStoredFunction.cs" />
+    <Compile Include="NQuery\Storage\Function\StoredFunction.cs" />
+    <Compile Include="NQuery\Storage\IGenParameter.cs" />
+    <Compile Include="NQuery\Storage\IGetQuery.cs" />
+    <Compile Include="NQuery\Storage\Join\StoredJoin.cs" />
+    <Compile Include="NQuery\Storage\Join\StoredJoinColumn.cs" />
+    <Compile Include="NQuery\Storage\Join\StoredJoinConstraint.cs" />
+    <None Include="NQuery\Storage\QueryCompiler.cs" />
+    <Compile Include="NQuery\Storage\QueryCompilerFusion.cs" />
+    <Compile Include="NQuery\Storage\Select\Case\CaseCondition.cs" />
+    <Compile Include="NQuery\Storage\Select\Case\StoredCase.cs" />
+    <Compile Include="NQuery\Storage\Select\Case\StoredCaseWhen.cs" />
+    <Compile Include="NQuery\Storage\Select\StoredConcat.cs" />
+    <Compile Include="NQuery\Storage\Select\StoredGroupBy.cs" />
+    <Compile Include="NQuery\Storage\Select\StoredOrderBy.cs" />
+    <Compile Include="NQuery\Storage\Select\StoredUnion.cs" />
+    <Compile Include="NQuery\Storage\Query.cs" />
+    <Compile Include="NQuery\Storage\StorageFactory.cs" />
+    <Compile Include="NQuery\Storage\StringConstant.cs" />
+    <Compile Include="NQuery\Storage\Table\StoredTable.cs" />
+    <Compile Include="NQuery\Storage\Table\TableFunctionDefinition.cs" />
+    <Compile Include="NQuery\Storage\Table\TableNameDefinition.cs" />
+    <Compile Include="NQuery\Storage\Table\TableSubQueryDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\SetColumnValue.cs" />
+    <Compile Include="NQuery\Storage\Value\SetValue.cs" />
+    <Compile Include="NQuery\Storage\Value\StoredValue.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueArrayDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueIntervalDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueObjectDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueStoredColumnDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueStoredColumnIntervalDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueStoredFunctionDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueStoredFunctionIntervalDefinition.cs" />
+    <Compile Include="NQuery\Storage\Value\ValueSubQueryDefinition.cs" />
+    <Compile Include="OrmInitializer.cs" />
+    <Compile Include="Period.cs" />
+    <Compile Include="Platform\PlatformFactory.cs" />
+    <Compile Include="Platform\WebApplication\ApplicationCommandCache.cs" />
+    <Compile Include="Platform\WebApplication\ApplicationCredential.cs" />
+    <Compile Include="Platform\WebApplication\ApplicationSchemaContainer.cs" />
+    <Compile Include="Platform\WebApplication\WebApplicationFactory.cs" />
+    <Compile Include="Platform\WebMist\WebMistFactory.cs" />
+    <Compile Include="Platform\WebSession\SessionCommandCache.cs" />
+    <Compile Include="Platform\WebSession\SessionCredential.cs" />
+    <Compile Include="Platform\WebSession\SessionSchemaContainer.cs" />
+    <Compile Include="Platform\WebSession\WebSessionFactory.cs" />
+    <Compile Include="Platform\Windows\WindowsCommandCache.cs" />
+    <Compile Include="Platform\Windows\WindowsCredential.cs" />
+    <Compile Include="Platform\Windows\WindowsSchemaContainer.cs" />
+    <Compile Include="Platform\Windows\WindowsFactory.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\CommandCache.cs" />
+    <None Include="Providers\EntityCrudBuilder.cs" />
+    <None Include="Providers\QueryBuilder.cs" />
+    <Compile Include="Providers\SqlServer\SqlEntityCrudBuilder.cs" />
+    <Compile Include="Providers\SqlServer\SqlServerProvider.cs" />
+    <Compile Include="Providers\SqlServer\SqlServerQueryBuilder.cs" />
+    <None Include="QueryDef\Aggregate.cs" />
+    <None Include="QueryDef\ColumnQuery.cs" />
+    <None Include="QueryDef\Concat.cs" />
+    <None Include="QueryDef\ConcatValue.cs" />
+    <None Include="QueryDef\ConstraintType.cs" />
+    <None Include="QueryDef\Constraint.cs" />
+    <None Include="QueryDef\SetFunctionValue.cs" />
+    <None Include="QueryDef\Executer.cs" />
+    <None Include="QueryDef\Function.cs" />
+    <None Include="QueryDef\GroupBy.cs" />
+    <None Include="QueryDef\HavingConstraint.cs" />
+    <None Include="QueryDef\AggregateFunction.cs" />
+    <None Include="QueryDef\OrderBy.cs" />
+    <None Include="QueryDef\SetValue.cs" />
+    <None Include="QueryDef\Join\JoinCondition.cs" />
+    <None Include="QueryDef\StringColumn.cs" />
+    <None Include="QueryDef\TableQuery.cs" />
+    <None Include="QueryDef\Join\ColumnJoin.cs" />
+    <None Include="QueryDef\Join\QueryJoin.cs" />
+    <None Include="QueryDef\Join\JoinType.cs" />
+    <None Include="QueryDef\ComparisonOperator.cs" />
+    <None Include="QueryDef\OrderBySortOrder.cs" />
+    <Compile Include="Entity\Attributes\ParameterDirectionAttribute.cs" />
+    <Compile Include="Entity\Attributes\PrimaryKeyAttribute.cs" />
+    <Compile Include="Entity\Attributes\SchemaType.cs" />
+    <Compile Include="Entity\Attributes\TableAliasAttribute.cs" />
+    <Compile Include="Entity\Attributes\TableNameAttribute.cs" />
+    <Compile Include="Entity\Attributes\TableSchemaTypeAttribute.cs" />
+    <Compile Include="Entity\EntityBase.cs" />
+    <Compile Include="Entity\EntityItemState.cs" />
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OrmException.cs" />
+    <None Include="QueryDef\Union.cs" />
+    <Compile Include="Starter\OrmStarter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\Credential.cs" />
+    <Compile Include="Providers\Provider.cs" />
+    <None Include="QueryDef\Query.cs" />
+    <None Include="QueryDef\QueryType.cs" />
+    <Compile Include="Schema\ColumnSchema.cs" />
+    <Compile Include="Schema\ColumnSchemaCollection.cs" />
+    <Compile Include="Schema\SchemaConteiner.cs" />
+    <Compile Include="Schema\TableSchema.cs" />
+    <Compile Include="Starter\Web\SqlServer2005ApplicationStarter.cs" />
+    <Compile Include="Starter\Web\SqlServer2005Starter.cs" />
+    <Compile Include="Starter\Windows\SqlServer2005Starter.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Oracle.DataAccess.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NQuery\Storage\Function\Table\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

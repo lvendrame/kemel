@@ -1,0 +1,244 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C85CCEFC-34D7-46A3-897C-43C0C72B836E}"
+	ProjectSection(SolutionItems) = preProject
+		Kemel.Framework1.vsmdi = Kemel.Framework1.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm", "Kemel.Orm\Kemel.Orm.csproj", "{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Tools", "Kemel.Tools\Kemel.Tools.csproj", "{EDD2916A-7E1B-47C1-817F-C1B1534E2351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Tools.Resources", "Kemel.Tools.Resources\Kemel.Tools.Resources.csproj", "{FB630556-B7E1-4146-843E-AB5AB7F48A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.Teste.Bll", "Kemel.Orm.Teste.Bll\Kemel.Orm.Teste.Bll.csproj", "{01B6343E-5069-41B6-901A-84306E172AB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.Teste", "Kemel.Orm.Teste\Kemel.Orm.Teste.csproj", "{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.Oracle.x32", "Kemel.Orm.Oracle.x32\Kemel.Orm.Oracle.x32.csproj", "{526423F9-5642-4525-92DE-52E2A79C3B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.Oracle.x64", "Kemel.Orm.Oracle.x64\Kemel.Orm.Oracle.x64.csproj", "{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.Oracle", "Kemel.Orm.Oracle\Kemel.Orm.Oracle.csproj", "{05ACA82D-556E-4D38-8DDC-38DB230909D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.Oracle.Common", "Kemel.Orm.Oracle.Common\Kemel.Orm.Oracle.Common.csproj", "{3C301172-569D-4CCD-B265-062AF08E0BE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.MySQL", "Kemel.Orm.MySQL\Kemel.Orm.MySQL.csproj", "{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Orm.Postgres", "Kemel.Orm.Postgres\Kemel.Orm.Postgres.csproj", "{C12DD152-5CBC-4C7F-907A-BA490AC29400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kemel.Util.Test", "Kemel.Util.Test\Kemel.Util.Test.csproj", "{EEF61E47-8056-4E1E-87F6-4AA44478C457}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vmsdigialm01:8080/tfs/projetosddc
+		SccProjectUniqueName0 = Kemel.Orm\\Kemel.Orm.csproj
+		SccProjectName0 = Kemel.Orm
+		SccAuxPath0 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath0 = Kemel.Orm
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Kemel.Orm.MySQL\\Kemel.Orm.MySQL.csproj
+		SccProjectName1 = Kemel.Orm.MySQL
+		SccAuxPath1 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath1 = Kemel.Orm.MySQL
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = Kemel.Orm.Oracle.Common\\Kemel.Orm.Oracle.Common.csproj
+		SccProjectName2 = Kemel.Orm.Oracle.Common
+		SccAuxPath2 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath2 = Kemel.Orm.Oracle.Common
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = Kemel.Orm.Oracle.x32\\Kemel.Orm.Oracle.x32.csproj
+		SccProjectName3 = Kemel.Orm.Oracle.x32
+		SccAuxPath3 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath3 = Kemel.Orm.Oracle.x32
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = Kemel.Orm.Oracle.x64\\Kemel.Orm.Oracle.x64.csproj
+		SccProjectName4 = Kemel.Orm.Oracle.x64
+		SccAuxPath4 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath4 = Kemel.Orm.Oracle.x64
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = Kemel.Orm.Oracle\\Kemel.Orm.Oracle.csproj
+		SccProjectName5 = Kemel.Orm.Oracle
+		SccAuxPath5 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath5 = Kemel.Orm.Oracle
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName6 = Kemel.Orm.Postgres\\Kemel.Orm.Postgres.csproj
+		SccProjectName6 = Kemel.Orm.Postgres
+		SccAuxPath6 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath6 = Kemel.Orm.Postgres
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName7 = Kemel.Tools.Resources\\Kemel.Tools.Resources.csproj
+		SccProjectName7 = Kemel.Tools.Resources
+		SccAuxPath7 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath7 = Kemel.Tools.Resources
+		SccProvider7 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName8 = Kemel.Tools\\Kemel.Tools.csproj
+		SccProjectName8 = Kemel.Tools
+		SccAuxPath8 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath8 = Kemel.Tools
+		SccProvider8 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName9 = Kemel.Orm.Teste.Bll\\Kemel.Orm.Teste.Bll.csproj
+		SccProjectName9 = Kemel.Orm.Teste.Bll
+		SccAuxPath9 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath9 = Kemel.Orm.Teste.Bll
+		SccProvider9 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName10 = Kemel.Util.Test\\Kemel.Util.Test.csproj
+		SccProjectName10 = Kemel.Util.Test
+		SccAuxPath10 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath10 = Kemel.Util.Test
+		SccProvider10 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName11 = Kemel.Orm.Teste\\Kemel.Orm.Teste.csproj
+		SccProjectName11 = Kemel.Orm.Teste
+		SccAuxPath11 = http://vmsdigialm01:8080/tfs/projetosddc
+		SccLocalPath11 = Kemel.Orm.Teste
+		SccProvider11 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Kemel.Framework1.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Debug|x64.ActiveCfg = Debug|x64
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Debug|x64.Build.0 = Debug|x64
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Debug|x86.ActiveCfg = Debug|x86
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Debug|x86.Build.0 = Debug|x86
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Release|x64.ActiveCfg = Release|x64
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Release|x64.Build.0 = Release|x64
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Release|x86.ActiveCfg = Release|x86
+		{AACC7D29-5A0C-40CA-B74F-5587FE5C1721}.Release|x86.Build.0 = Release|x86
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Debug|x64.ActiveCfg = Debug|x64
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Debug|x64.Build.0 = Debug|x64
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Debug|x86.ActiveCfg = Debug|x86
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Debug|x86.Build.0 = Debug|x86
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Release|x64.ActiveCfg = Release|x64
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Release|x64.Build.0 = Release|x64
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Release|x86.ActiveCfg = Release|x86
+		{EDD2916A-7E1B-47C1-817F-C1B1534E2351}.Release|x86.Build.0 = Release|x86
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Debug|x64.ActiveCfg = Debug|x64
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Debug|x64.Build.0 = Debug|x64
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Debug|x86.ActiveCfg = Debug|x86
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Debug|x86.Build.0 = Debug|x86
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Release|x64.ActiveCfg = Release|x64
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Release|x64.Build.0 = Release|x64
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Release|x86.ActiveCfg = Release|x86
+		{FB630556-B7E1-4146-843E-AB5AB7F48A4E}.Release|x86.Build.0 = Release|x86
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Debug|x64.ActiveCfg = Debug|x64
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Debug|x64.Build.0 = Debug|x64
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Debug|x86.ActiveCfg = Debug|x86
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Debug|x86.Build.0 = Debug|x86
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Release|x64.ActiveCfg = Release|x64
+		{01B6343E-5069-41B6-901A-84306E172AB7}.Release|x86.ActiveCfg = Release|x86
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Debug|x64.ActiveCfg = Debug|x64
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Debug|x64.Build.0 = Debug|x64
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Debug|x86.ActiveCfg = Debug|x86
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Debug|x86.Build.0 = Debug|x86
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Release|x64.ActiveCfg = Release|x64
+		{4071B0D2-2A6B-4FC9-AABC-C31BC2EF27EA}.Release|x86.ActiveCfg = Release|x86
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Debug|x64.ActiveCfg = Debug|x64
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Debug|x64.Build.0 = Debug|x64
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Debug|x86.ActiveCfg = Debug|x86
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Debug|x86.Build.0 = Debug|x86
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Release|x64.ActiveCfg = Release|x64
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Release|x64.Build.0 = Release|x64
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Release|x86.ActiveCfg = Release|x86
+		{526423F9-5642-4525-92DE-52E2A79C3B84}.Release|x86.Build.0 = Release|x86
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Debug|x64.ActiveCfg = Debug|x64
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Debug|x64.Build.0 = Debug|x64
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Debug|x86.ActiveCfg = Debug|x86
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Debug|x86.Build.0 = Debug|x86
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Release|x64.ActiveCfg = Release|x64
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Release|x64.Build.0 = Release|x64
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Release|x86.ActiveCfg = Release|x86
+		{0141EF0B-B00B-4954-89A0-4D1BC44F26C5}.Release|x86.Build.0 = Release|x86
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Debug|x64.ActiveCfg = Debug|x64
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Debug|x64.Build.0 = Debug|x64
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Debug|x86.ActiveCfg = Debug|x86
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Debug|x86.Build.0 = Debug|x86
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Release|x64.ActiveCfg = Release|x64
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Release|x64.Build.0 = Release|x64
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Release|x86.ActiveCfg = Release|x86
+		{05ACA82D-556E-4D38-8DDC-38DB230909D1}.Release|x86.Build.0 = Release|x86
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Debug|x64.ActiveCfg = Debug|x64
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Debug|x64.Build.0 = Debug|x64
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Debug|x86.ActiveCfg = Debug|x86
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Debug|x86.Build.0 = Debug|x86
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Release|x64.ActiveCfg = Release|x64
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Release|x64.Build.0 = Release|x64
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Release|x86.ActiveCfg = Release|x86
+		{3C301172-569D-4CCD-B265-062AF08E0BE4}.Release|x86.Build.0 = Release|x86
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Release|x64.ActiveCfg = Release|Any CPU
+		{1DCE17EF-8F7D-41A2-BA13-9FC4298978A5}.Release|x86.ActiveCfg = Release|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Release|x64.ActiveCfg = Release|Any CPU
+		{C12DD152-5CBC-4C7F-907A-BA490AC29400}.Release|x86.ActiveCfg = Release|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Release|x64.ActiveCfg = Release|Any CPU
+		{EEF61E47-8056-4E1E-87F6-4AA44478C457}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

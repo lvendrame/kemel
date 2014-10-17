@@ -125,7 +125,7 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
-# TODO: Comment the next line if you want to checkin your web deploy settings 
+# TODO: Comment the next line if you want to checkin your web deploy settings
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
@@ -155,7 +155,6 @@ ClientBin/
 *~
 *.dbmdl
 *.dbproj.schemaview
-*.pfx
 *.publishsettings
 node_modules/
 
@@ -181,3 +180,27 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+/Kemel.Orm/Bin/
+/Kemel.Orm/obj/
+/Kemel.Tools/bin/
+/Kemel.Tools/obj/
+/Kemel.Orm.MySQL/bin/
+/Kemel.Orm.MySQL/obj/
+/Kemel.Orm.Oracle/bin/
+/Kemel.Orm.Oracle/obj/
+/Kemel.Orm.Postgres/bin/
+/Kemel.Orm.Postgres/obj/
+/Kemel.Orm.Teste/bin/
+/Kemel.Orm.Teste/obj/
+/Kemel.Orm.Oracle.Common/bin/
+/Kemel.Orm.Oracle.Common/obj/
+/Kemel.Orm.Oracle.x32/bin/
+/Kemel.Orm.Oracle.x32/obj/
+/Kemel.Orm.Oracle.x64/bin/
+/Kemel.Orm.Oracle.x64/obj/
+/Kemel.Orm.Teste.Bll/bin/
+/Kemel.Orm.Teste.Bll/obj/
+/Kemel.Tools.Resources/bin/
+/Kemel.Tools.Resources/obj/
+/Kemel.Util.Test/bin/
+/Kemel.Util.Test/obj/
