@@ -39,13 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Kuery\ComparisonOperator.cs" />
-    <Compile Include="Kuery\Comparison\ComparisonBehavior.cs" />
-    <Compile Include="Kuery\Comparison\IComparisonProvider.cs" />
+    <Compile Include="Kuery\Constraint\Behaviors\ConstraintTypeBehavior.cs" />
+    <Compile Include="Kuery\Constraint\Behaviors\IConstraintTypeProvider.cs" />
+    <Compile Include="Kuery\Constraint\ComparisonOperator.cs" />
+    <Compile Include="Kuery\Constraint\Behaviors\ComparisonBehavior.cs" />
+    <Compile Include="Kuery\Constraint\Behaviors\IComparisonProvider.cs" />
+    <Compile Include="Kuery\Constraint\ConstraintType.cs" />
     <Compile Include="Kuery\IQuery.cs" />
     <Compile Include="Kuery\ProviderContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

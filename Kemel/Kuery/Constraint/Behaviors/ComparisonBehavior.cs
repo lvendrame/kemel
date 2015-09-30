@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kemel.Kuery.Comparison
+namespace Kemel.Kuery.Constraint.Behaviors
 {
     public class ComparisonBehavior: ProviderContainer<IComparisonProvider, ComparisonOperator>
     {
@@ -72,7 +72,7 @@ namespace Kemel.Kuery.Comparison
                     this.Provider.ContainsBehavior();
                     break;
                 default:
-                    throw new ArgumentException("Invalid ComparisonOperator", "comparisonOperator");
+                    throw new ArgumentException("Invalid ComparisonOperator", "enumType");
             }
         }
 

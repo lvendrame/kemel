@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kemel.Kuery.Comparison
+namespace Kemel.Kuery.Constraint.Behaviors
 {
     public interface IComparisonProvider
     {
