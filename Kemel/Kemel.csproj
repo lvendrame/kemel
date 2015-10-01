@@ -43,7 +43,11 @@
     <Compile Include="Constants\DML\ConstraintTypes.cs" />
     <Compile Include="Constants\DataTypes.cs" />
     <Compile Include="Constants\DDL\DDL.cs" />
-    <Compile Include="Constants\DML\DML.cs" />
+    <Compile Include="Constants\DML\Select.cs" />
+    <Compile Include="Constants\DML\Update.cs" />
+    <Compile Include="Constants\DML\Insert.cs" />
+    <Compile Include="Constants\DML\Delete.cs" />
+    <Compile Include="Constants\DML\Common.cs" />
     <Compile Include="Constants\DML\Functions.cs" />
     <Compile Include="Constants\DML\Join.cs" />
     <Compile Include="Constants\Prefix.cs" />
