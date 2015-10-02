@@ -54,6 +54,11 @@
     <Compile Include="Constants\Punctuation.cs" />
     <Compile Include="Constants\StoreProceduresPrefix.cs" />
     <Compile Include="Constants\Sufix.cs" />
+    <Compile Include="Entity\EntityBase.cs" />
+    <Compile Include="Entity\EntityState.cs" />
+    <Compile Include="Entity\EntityStateBehavior.cs" />
+    <Compile Include="Entity\IEntityStateProvider.cs" />
+    <Compile Include="Exceptions\KemelException.cs" />
     <Compile Include="Extensions\DataTableExtensions.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Extensions\MemberInfoExtensions.cs" />
@@ -69,11 +74,14 @@
     <Compile Include="Kuery\Constraint\Behaviors\IComparisonProvider.cs" />
     <Compile Include="Kuery\Constraint\ConstraintType.cs" />
     <Compile Include="Kuery\IQuery.cs" />
-    <Compile Include="Kuery\ProviderContainer.cs" />
+    <Compile Include="ProviderContainer.cs" />
     <Compile Include="Kuery\QueryType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Kuery\Providers\" />
+    <Folder Include="UnitWork\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
