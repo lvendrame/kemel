@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Kemel.Orm.Constants
+namespace Kemel.Constants
 {
     public static class Punctuation
     {
