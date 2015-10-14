@@ -8,15 +8,27 @@ namespace Kemel.Schema
 {
     public class ValidatorsFactory
     {
-        public SchemaValidatorCollection BuilderColumnValidator(ColumnSchema column)
+        public static ISchemaValidator BuilderColumnValidator(ColumnSchema column)
         {
             SchemaValidatorCollection validators = new SchemaValidatorCollection();
+
+            if (column.IsIdentity)
+            {
+                validators.Add(new ColumnValidators.IdentityValidator(column));
+            }
+
+            if(column.MaxLength != 0)
+            {
+                validators.Add(new ColumnValidators.MaxLengthValidator(column));
+            }
+
+            if (!column.AllowNull)
+            {
+                validators.Add(new ColumnValidators.NullValidator(column));
+            }
+
             return validators;
         }
-        public SchemaValidatorCollection BuilderTableValidator(TableSchema column)
-        {
-            SchemaValidatorCollection validators = new SchemaValidatorCollection();
-            return validators;
-        }
+
     }
 }

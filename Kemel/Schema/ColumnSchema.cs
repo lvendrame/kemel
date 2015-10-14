@@ -409,6 +409,24 @@ namespace Kemel.Schema
         }
         #endregion
 
+        #region ValidatorProvider
+        private ISchemaValidator _validatorProvider;
+
+        public ISchemaValidator ValidatorProvider
+        {
+            get
+            {
+                if (_validatorProvider == null)
+                {
+                    _validatorProvider = ValidatorsFactory.BuilderColumnValidator(this);
+                }
+                return _validatorProvider;
+            }
+            set { _validatorProvider = value; }
+        } 
+        #endregion
+
+
         #endregion
 
         #region Methods
@@ -426,72 +444,14 @@ namespace Kemel.Schema
                 this._referenceTableName = string.Empty;
             }
         }
-
+                
         #region ValidateField
         /// <summary>
         /// Validate entity.
         /// </summary>
-        public void ValidateField(EntityBase entity)
+        public void ValidateField(CrudOperation crudOperation, object obj)
         {
-            object value;
-            // Se o campo não for auto-numerado
-            if (!this.IsIdentity)
-            {
-                // Se o campo não permite nulo
-                if (!this.AllowNull)
-                {
-                    // Se o valor do campo é nulo ou está em branco, gera a exceção
-                    value = this.GetValue(entity);
-                    if (value == null || value.ToString().Length == 0)
-                    {
-                        throw new OrmException(string.Format(Messages.FieldNotEmpty, this.Name));
-                    }
-                }
-            }
-
-            // Se o campo tem tamanho máximo definido
-            if (this.MaxLength != 0)
-            {
-                value = this.GetValue(entity);
-                if (value != null && value.ToString().Length > this.MaxLength)
-                {
-                    throw new OrmException(string.Format(Messages.FieldGreaterThanMaxLength, this.Name, this.MaxLength));
-                }
-            }
-        }
-        #endregion
-
-        #region ValidateField
-        /// <summary>
-        /// Validate entity.
-        /// </summary>
-        public void ValidateField(object obj)
-        {
-            object value;
-            // Se o campo não for auto-numerado
-            if (!this.IsIdentity)
-            {
-                // Se o campo não permite nulo
-                if (!this.AllowNull)
-                {
-                    // Se o valor do campo é nulo ou está em branco, gera a exceção
-                    value = this.GetValue(obj);
-                    if (value == null || value.ToString().Length == 0)
-                    {
-                        throw new OrmException(string.Format(Messages.FieldNotEmpty, this.Name));
-                    }
-                }
-            }
-
-            // Se o campo tem tamanho máximo definido
-            if (this.MaxLength != 0)
-            {
-                value = this.GetValue(obj);
-                if (value != null && value.ToString().Length > this.MaxLength)
-                {
-                    throw new OrmException(string.Format(Messages.FieldGreaterThanMaxLength, this.Name, this.MaxLength));
-                }
-            }
+            this.ValidatorProvider.Validate(crudOperation, this.GetValue(obj));
         }
         #endregion
 

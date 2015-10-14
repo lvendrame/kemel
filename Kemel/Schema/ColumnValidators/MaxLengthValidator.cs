@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kemel.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,18 +9,18 @@ namespace Kemel.Schema.ColumnValidators
 {
     public class MaxLengthValidator: ISchemaValidator
     {
-        public MaxLengthValidator(int maxLength)
+        public MaxLengthValidator(ColumnSchema column)
         {
-            this.MaxLength = maxLength;
+            this.Column = column;
         }
 
-        public int MaxLength { get; set; }
+        public ColumnSchema Column { get; set; }
 
         public void Validate(Base.CrudOperation crudOperation, object value)
         {
-            if (value != null && value.ToString().Length > this.MaxLength)
+            if (value != null && value.ToString().Length > this.Column.MaxLength)
             {
-                throw new OrmException(string.Format(Messages.FieldGreaterThanMaxLength, this.Name, this.MaxLength));
+                throw new KemelException(string.Format(Messages.FieldGreaterThanMaxLength, this.Column.Name, this.Column.MaxLength));
             }
         }
     }

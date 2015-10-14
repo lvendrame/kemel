@@ -7,6 +7,7 @@ using System.Reflection;
 using Kemel.Entity;
 using Kemel.Constants;
 using Kemel.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Kemel.Schema
 {
@@ -222,11 +223,11 @@ namespace Kemel.Schema
         ///// <summary>
         ///// Validate entity.
         ///// </summary>
-        public void Validate(EntityBase entity)
+        public void Validate(CrudOperation crudOperation, EntityBase entity)
         {
             foreach (ColumnSchema column in this.Columns)
             {
-                column.ValidateField(entity);
+                column.ValidateField(crudOperation, entity);
             }
         }
         #endregion
@@ -254,28 +255,7 @@ namespace Kemel.Schema
         /// <returns></returns>
         public static string GetTableAlias<TEtt>() where TEtt : EntityBase
         {
-            TableAliasAttribute att = typeof(TEtt).GetCustomAttribute<TableAliasAttribute>();
-            return (att != null) ? att.Alias : string.Empty;
-        }
-        #endregion
-
-        #region GetTableName<TEtt>
-        /// <summary>
-        /// GetTableName
-        /// </summary>
-        /// <param name="propInfo"></param>
-        /// <returns></returns>
-        public static string GetTableName<TEtt>() where TEtt : EntityBase
-        {
-            TableNameAttribute att = typeof(TEtt).GetCustomAttribute<TableNameAttribute>();
-            if (att != null)
-            {
-                return att.Name;
-            }
-            else
-            {
-                return typeof(TEtt).Name.Replace(Sufix.ENTITY_NAME, string.Empty);
-            }
+            return GetTableAlias(typeof(TEtt));
         }
         #endregion
 
@@ -287,7 +267,7 @@ namespace Kemel.Schema
         /// <returns></returns>
         public static string GetTableName(Type entityType)
         {
-            TableNameAttribute att = entityType.GetCustomAttribute<TableNameAttribute>();
+            TableAttribute att = entityType.GetCustomAttribute<TableAttribute>();
             if (att != null)
             {
                 return att.Name;
@@ -296,6 +276,18 @@ namespace Kemel.Schema
             {
                 return entityType.Name.Replace(Sufix.ENTITY_NAME, string.Empty);
             }
+        }
+        #endregion
+
+        #region GetTableName<TEtt>
+        /// <summary>
+        /// GetTableName
+        /// </summary>
+        /// <param name="propInfo"></param>
+        /// <returns></returns>
+        public static string GetTableName<TEtt>() where TEtt : EntityBase
+        {
+            return GetTableName(typeof(TEtt));
         }
         #endregion
 
