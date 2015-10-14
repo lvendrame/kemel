@@ -8,7 +8,7 @@ namespace Kemel.Schema
 {
     public class ValidatorsFactory
     {
-        public static ISchemaValidator BuilderColumnValidator(ColumnSchema column)
+        public static ISchemaValidator BuilderValidator(ColumnSchema column)
         {
             SchemaValidatorCollection validators = new SchemaValidatorCollection();
 

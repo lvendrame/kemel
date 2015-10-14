@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using Kemel;
 using Kemel.Entity;
 using Kemel.Schema;
 using System.Reflection;
@@ -15,38 +16,40 @@ namespace Kemel.Data
 
         #region Properties
 
-        private IDbCommand cmdWraperCommand = null;
+        private IDbCommand _wraperCommand = null;
         public IDbCommand WraperCommand
         {
             get
             {
-                return this.cmdWraperCommand;
+                return this._wraperCommand;
             }
         }
 
-        private KemelTransaction transaction;
+        private KemelTransaction _transaction;
 
-        private int intMaxAttempts = 1;
+        private int _maxAttempts = 1;
         public int MaxAttempts
         {
             get
             {
-                return this.intMaxAttempts;
+                return this._maxAttempts;
             }
             set
             {
-                this.intMaxAttempts = value;
+                this._maxAttempts = value;
             }
         }
 
-        private StringBuilder stbWriterCommand = null;
+        private StringBuilder _writerCommand = null;
         public StringBuilder WriterCommand
         {
             get
             {
-                if (this.stbWriterCommand == null)
-                    this.stbWriterCommand = new StringBuilder();
-                return this.stbWriterCommand;
+                if (this._writerCommand == null)
+                {
+                    this._writerCommand = new StringBuilder();
+                }
+                return this._writerCommand;
             }
         }
 
@@ -54,11 +57,11 @@ namespace Kemel.Data
 
         private bool PrepareTransaction()
         {
-            if (this.transaction != null)
+            if (this._transaction != null)
             {
-                if (this.transaction.State != TransactionState.Started)
-                    this.transaction.Begin();
-                this.Transaction = transaction.TransactionWraper;
+                if (this._transaction.State != TransactionState.Started)
+                    this._transaction.Begin();
+                this.Transaction = _transaction.TransactionWraper;
                 return true;
             }
             return false;
@@ -66,31 +69,31 @@ namespace Kemel.Data
 
         internal Kommand(IDbCommand command)
         {
-            this.cmdWraperCommand = command;
+            this._wraperCommand = command;
         }
 
         internal Kommand(IDbCommand command, KemelTransaction transaction)
         {
-            this.cmdWraperCommand = command;
-            this.transaction = transaction;
+            this._wraperCommand = command;
+            this._transaction = transaction;
         }
 
         #region IDbCommand Members
 
         public void Cancel()
         {
-            this.cmdWraperCommand.Cancel();
+            this._wraperCommand.Cancel();
         }
 
         public string CommandText
         {
             get
             {
-                return this.cmdWraperCommand.CommandText;
+                return this._wraperCommand.CommandText;
             }
             set
             {
-                this.cmdWraperCommand.CommandText = value;
+                this._wraperCommand.CommandText = value;
             }
         }
 
@@ -98,11 +101,11 @@ namespace Kemel.Data
         {
             get
             {
-                return this.cmdWraperCommand.CommandTimeout;
+                return this._wraperCommand.CommandTimeout;
             }
             set
             {
-                this.cmdWraperCommand.CommandTimeout = value;
+                this._wraperCommand.CommandTimeout = value;
             }
         }
 
@@ -110,11 +113,11 @@ namespace Kemel.Data
         {
             get
             {
-                return this.cmdWraperCommand.CommandType;
+                return this._wraperCommand.CommandType;
             }
             set
             {
-                this.cmdWraperCommand.CommandType = value;
+                this._wraperCommand.CommandType = value;
             }
         }
 
@@ -122,29 +125,29 @@ namespace Kemel.Data
         {
             get
             {
-                return this.cmdWraperCommand.Connection;
+                return this._wraperCommand.Connection;
             }
             set
             {
-                this.cmdWraperCommand.Connection = value;
+                this._wraperCommand.Connection = value;
             }
         }
 
         System.Data.IDbDataParameter IDbCommand.CreateParameter()
         {
-            return this.cmdWraperCommand.CreateParameter();
+            return this._wraperCommand.CreateParameter();
         }
 
         public IDbDataParameter AddParameter()
         {
-            IDbDataParameter parameter = this.cmdWraperCommand.CreateParameter();
+            IDbDataParameter parameter = this._wraperCommand.CreateParameter();
             this.Parameters.Add(parameter);
             return parameter;
         }
 
         public IDbDataParameter AddParameter(string parameterName)
         {
-            IDbDataParameter parameter = this.cmdWraperCommand.CreateParameter();
+            IDbDataParameter parameter = this._wraperCommand.CreateParameter();
             parameter.ParameterName = parameterName;
             this.Parameters.Add(parameter);
             return parameter;
@@ -154,11 +157,11 @@ namespace Kemel.Data
         {
             get
             {
-                return this.cmdWraperCommand.Parameters[index] as IDbDataParameter;
+                return this._wraperCommand.Parameters[index] as IDbDataParameter;
             }
             set
             {
-                this.cmdWraperCommand.Parameters[index] = value;
+                this._wraperCommand.Parameters[index] = value;
             }
         }
 
@@ -166,11 +169,11 @@ namespace Kemel.Data
         {
             get
             {
-                return this.cmdWraperCommand.Parameters[parameterName] as IDbDataParameter;
+                return this._wraperCommand.Parameters[parameterName] as IDbDataParameter;
             }
             set
             {
-                this.cmdWraperCommand.Parameters[parameterName] = value;
+                this._wraperCommand.Parameters[parameterName] = value;
             }
         }
 
@@ -178,7 +181,7 @@ namespace Kemel.Data
         {
             get
             {
-                return this.cmdWraperCommand.Parameters;
+                return this._wraperCommand.Parameters;
             }
         }
 
@@ -193,12 +196,12 @@ namespace Kemel.Data
         private int ExecuteNonQueryWithTransaction()
         {
             int retValue = 0;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
-                    retValue = this.cmdWraperCommand.ExecuteNonQuery();
+                    retValue = this._wraperCommand.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -213,13 +216,13 @@ namespace Kemel.Data
         private int ExecuteNonQueryWithoutTransaction()
         {
             int retValue = 0;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
                     this.OpenConnection();
-                    retValue = this.cmdWraperCommand.ExecuteNonQuery();
+                    retValue = this._wraperCommand.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -247,12 +250,12 @@ namespace Kemel.Data
         private IDataReader ExecuteReaderWithTransaction(CommandBehavior behavior)
         {
             IDataReader retDR = null;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
-                    retDR = this.cmdWraperCommand.ExecuteReader(behavior);
+                    retDR = this._wraperCommand.ExecuteReader(behavior);
                 }
                 catch (Exception ex)
                 {
@@ -267,13 +270,13 @@ namespace Kemel.Data
         private IDataReader ExecuteReaderWithoutTransaction(CommandBehavior behavior)
         {
             IDataReader retDR = null;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
                     this.OpenConnection();
-                    retDR = this.cmdWraperCommand.ExecuteReader(behavior);
+                    retDR = this._wraperCommand.ExecuteReader(behavior);
                 }
                 catch (Exception ex)
                 {
@@ -301,12 +304,12 @@ namespace Kemel.Data
         private IDataReader ExecuteReaderWithTransaction()
         {
             IDataReader retDR = null;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
-                    retDR = this.cmdWraperCommand.ExecuteReader();
+                    retDR = this._wraperCommand.ExecuteReader();
                 }
                 catch (Exception ex)
                 {
@@ -321,13 +324,13 @@ namespace Kemel.Data
         private IDataReader ExecuteReaderWithoutTransaction()
         {
             IDataReader retDR = null;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
                     this.OpenConnection();
-                    retDR = this.cmdWraperCommand.ExecuteReader();
+                    retDR = this._wraperCommand.ExecuteReader();
                 }
                 catch (Exception ex)
                 {
@@ -355,12 +358,12 @@ namespace Kemel.Data
         private object ExecuteScalarWithTransaction()
         {
             object retValue = null;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
-                    retValue = this.cmdWraperCommand.ExecuteScalar();
+                    retValue = this._wraperCommand.ExecuteScalar();
                 }
                 catch (Exception ex)
                 {
@@ -375,13 +378,13 @@ namespace Kemel.Data
         private object ExecuteScalarWithoutTransaction()
         {
             object retValue = null;
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
                     this.OpenConnection();
-                    retValue = this.cmdWraperCommand.ExecuteScalar();
+                    retValue = this._wraperCommand.ExecuteScalar();
                 }
                 catch (Exception ex)
                 {
@@ -413,18 +416,18 @@ namespace Kemel.Data
 
         public void Prepare()
         {
-            this.cmdWraperCommand.Prepare();
+            this._wraperCommand.Prepare();
         }
 
         public System.Data.IDbTransaction Transaction
         {
             get
             {
-                return this.cmdWraperCommand.Transaction;
+                return this._wraperCommand.Transaction;
             }
             set
             {
-                this.cmdWraperCommand.Transaction = value;
+                this._wraperCommand.Transaction = value;
             }
         }
 
@@ -432,11 +435,11 @@ namespace Kemel.Data
         {
             get
             {
-                return this.cmdWraperCommand.UpdatedRowSource;
+                return this._wraperCommand.UpdatedRowSource;
             }
             set
             {
-                this.cmdWraperCommand.UpdatedRowSource = value;
+                this._wraperCommand.UpdatedRowSource = value;
             }
         }
 
@@ -446,7 +449,7 @@ namespace Kemel.Data
 
         public void Dispose()
         {
-            this.cmdWraperCommand.Dispose();
+            this._wraperCommand.Dispose();
             GC.SuppressFinalize(this);
         }
 
@@ -473,12 +476,12 @@ namespace Kemel.Data
             List<T> lstEntity = new List<T>();
             IDataReader dr = null;
 
-            AttemptsControl attempsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attempsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
-                    dr = this.cmdWraperCommand.ExecuteReader();
+                    dr = this._wraperCommand.ExecuteReader();
                     if (dr.Read())
                     {
                         int countFields = dr.FieldCount;
@@ -575,14 +578,14 @@ namespace Kemel.Data
             List<T> lstEntity = new List<T>();
             IDataReader dr = null;
 
-            AttemptsControl attempsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attempsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 try
                 {
                     this.OpenConnection();
 
-                    dr = this.cmdWraperCommand.ExecuteReader();
+                    dr = this._wraperCommand.ExecuteReader();
                     if (dr.Read())
                     {
                         int countFields = dr.FieldCount;
@@ -686,13 +689,13 @@ namespace Kemel.Data
         private DataTable ExecuteDataTableWithTransaction()
         {
             DataTable dt = new DataTable();
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 IDataReader dr = null;
                 try
                 {
-                    dr = this.cmdWraperCommand.ExecuteReader();
+                    dr = this._wraperCommand.ExecuteReader();
                     dt.FromDataReader(dr);
                 }
                 catch (Exception ex)
@@ -713,14 +716,14 @@ namespace Kemel.Data
         private DataTable ExecuteDataTableWithoutTransaction()
         {
             DataTable dt = new DataTable();
-            AttemptsControl attemptsControl = new AttemptsControl(this.intMaxAttempts);
+            AttemptsControl attemptsControl = new AttemptsControl(this._maxAttempts);
             do
             {
                 IDataReader dr = null;
                 try
                 {
                     this.OpenConnection();
-                    dr = this.cmdWraperCommand.ExecuteReader();
+                    dr = this._wraperCommand.ExecuteReader();
                     dt.FromDataReader(dr);
                 }
                 catch (Exception ex)

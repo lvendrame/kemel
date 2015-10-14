@@ -418,7 +418,7 @@ namespace Kemel.Schema
             {
                 if (_validatorProvider == null)
                 {
-                    _validatorProvider = ValidatorsFactory.BuilderColumnValidator(this);
+                    _validatorProvider = ValidatorsFactory.BuilderValidator(this);
                 }
                 return _validatorProvider;
             }
