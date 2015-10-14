@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kemel.Kuery.Behaviors
 {
-    public class QueryTypeBehavior: ProviderContainer<IQueryTypeProvider, QueryType>
+    public class QueryTypeBehavior: BehaviorProviderContainer<IQueryTypeProvider, QueryType>
     {
         public QueryTypeBehavior(IQueryTypeProvider queryTypeProvider)
             : base(queryTypeProvider)

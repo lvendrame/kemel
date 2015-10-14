@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,6 +64,7 @@
     <Compile Include="Constants\Sufix.cs" />
     <Compile Include="DataProvider\DataProviderContainer.cs" />
     <Compile Include="DataProvider\DataProviderFactory.cs" />
+    <Compile Include="DataProvider\IDBSchemaCommands.cs" />
     <Compile Include="DataProvider\IDataProvider.cs" />
     <Compile Include="Data\ITypeConverter.cs" />
     <Compile Include="Data\KemelTransaction.cs" />
@@ -113,7 +115,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="ProviderContainer.cs" />
+    <Compile Include="BehaviorProviderContainer.cs" />
     <Compile Include="Kuery\QueryType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schema\ColumnSchema.cs" />

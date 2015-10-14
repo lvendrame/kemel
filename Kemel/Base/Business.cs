@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Kemel.Entity;
 using Kemel.Data;
-using Kemel.Providers;
+using Kemel.DataProvider;
 
 namespace Kemel.Base
 {
@@ -13,7 +13,7 @@ namespace Kemel.Base
         where TDal : Dal<TEtt>, new()
     {
 
-        public Provider CurrentProvider
+        public IDataProvider CurrentProvider
         {
             get
             {
