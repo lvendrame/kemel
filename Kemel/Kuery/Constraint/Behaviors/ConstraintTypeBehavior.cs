@@ -30,7 +30,8 @@ namespace Kemel.Kuery.Constraint.Behaviors
                     this.Provider.NoneBehavior();
                     break;
                 default:
-                    throw new ArgumentException("Invalid ConstraintType", "enumType");
+                    base.ThrowInvalidEnumType();
+                    break;
             }
         }
 

@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Data;
 using Kemel.Orm.Constants;
 using Kemel.Exceptions;
-//using Kemel.Orm.Entity.Attributes;
+using Kemel.Entity.Attributes;
 
 namespace Kemel.Entity
 {

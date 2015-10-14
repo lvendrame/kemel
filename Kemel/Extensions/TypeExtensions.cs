@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Kemel.Orm.Entity;
+using Kemel.Entity;
 using System.Data;
 using Kemel.Orm.Schema;
 using Kemel.Orm.Constants;

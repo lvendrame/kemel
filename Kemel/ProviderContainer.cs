@@ -21,5 +21,10 @@ namespace Kemel
         }
 
         public abstract void DoBehavior(E enumType);
+
+        internal void ThrowInvalidEnumType()
+        {
+            throw new ArgumentException("Invalid " + typeof(E).Name, "enumType");
+        }
     }
 }

@@ -30,7 +30,8 @@ namespace Kemel.Entity
                     this.Provider.ModifiedBehavior();
                     break;
                 default:
-                    throw new ArgumentException("Invalid EntityState", "enumType");
+                    base.ThrowInvalidEnumType();
+                    break;
             }
         }
     }

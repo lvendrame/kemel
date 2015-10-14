@@ -36,7 +36,8 @@ namespace Kemel.Kuery.Behaviors
                     this.Provider.FunctionBehavior();
                     break;
                 default:
-                    throw new ArgumentException("Invalid QueryType", "enumType");
+                    base.ThrowInvalidEnumType();
+                    break;
             }
         }
     }

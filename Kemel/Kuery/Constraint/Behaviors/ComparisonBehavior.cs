@@ -72,7 +72,8 @@ namespace Kemel.Kuery.Constraint.Behaviors
                     this.Provider.ContainsBehavior();
                     break;
                 default:
-                    throw new ArgumentException("Invalid ComparisonOperator", "enumType");
+                    base.ThrowInvalidEnumType();
+                    break;
             }
         }
 
