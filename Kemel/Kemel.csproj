@@ -40,6 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Business.cs" />
+    <Compile Include="Base\CrudOperation.cs" />
+    <Compile Include="Base\Dal.cs" />
+    <Compile Include="Base\IColumnDefinition.cs" />
+    <Compile Include="Base\ITableDefinition.cs" />
     <Compile Include="Constants\DML\Comparisons.cs" />
     <Compile Include="Constants\DML\ConstraintTypes.cs" />
     <Compile Include="Constants\DataTypes.cs" />
@@ -55,25 +60,10 @@
     <Compile Include="Constants\Punctuation.cs" />
     <Compile Include="Constants\StoreProceduresPrefix.cs" />
     <Compile Include="Constants\Sufix.cs" />
-    <Compile Include="Entity\Attributes\AllowNullAttribute.cs" />
-    <Compile Include="Entity\Attributes\ColumnAliasAttribute.cs" />
-    <Compile Include="Entity\Attributes\ColumnType.cs" />
-    <Compile Include="Entity\Attributes\ColumnUseTypeAttribute.cs" />
-    <Compile Include="Entity\Attributes\ConverterAttribute.cs" />
-    <Compile Include="Entity\Attributes\ForeignKeyAttribute.cs" />
-    <Compile Include="Entity\Attributes\IdentityAttribute.cs" />
-    <Compile Include="Entity\Attributes\IgnorePropertyAttribute.cs" />
-    <Compile Include="Entity\Attributes\IsNotColumnAttribute.cs" />
-    <Compile Include="Entity\Attributes\KeyProviderAttribute.cs" />
-    <Compile Include="Entity\Attributes\LogicalExclusionColumnAttribute.cs" />
-    <Compile Include="Entity\Attributes\MaxLengthAttribute.cs" />
-    <Compile Include="Entity\Attributes\OrderByAttribute.cs" />
-    <Compile Include="Entity\Attributes\OwnerAttribute.cs" />
-    <Compile Include="Entity\Attributes\ParameterDirectionAttribute.cs" />
-    <Compile Include="Entity\Attributes\PrimaryKeyAttribute.cs" />
-    <Compile Include="Schema\ISchemaTypeProvider.cs" />
-    <Compile Include="Schema\SchemaType.cs" />
-    <Compile Include="Entity\Attributes\SequenceAttribute.cs" />
+    <Compile Include="Data\ITypeConverter.cs" />
+    <Compile Include="Data\Kommand.cs" />
+    <Compile Include="Data\Konnection.cs" />
+    <Compile Include="Data\KemelTransaction.cs" />
     <Compile Include="Entity\Attributes\TableAliasAttribute.cs" />
     <Compile Include="Entity\Attributes\TableNameAttribute.cs" />
     <Compile Include="Entity\Attributes\TableSchemaTypeAttribute.cs" />
@@ -101,10 +91,20 @@
     <Compile Include="ProviderContainer.cs" />
     <Compile Include="Kuery\QueryType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schema\SchemaTypeBehavior.cs" />
+    <Compile Include="Schema\ColumnSchema.cs" />
+    <Compile Include="Schema\ColumnSchemaCollection.cs" />
+    <Compile Include="Schema\ColumnValidators\IdentityValidator.cs" />
+    <Compile Include="Schema\ColumnValidators\MaxLengthValidator.cs" />
+    <Compile Include="Schema\ColumnValidators\NullValidator.cs" />
+    <Compile Include="Schema\ISchemaValidator.cs" />
+    <Compile Include="Schema\SchemaConteiner.cs" />
+    <Compile Include="Schema\SchemaValidatorCollection.cs" />
+    <Compile Include="Schema\TableSchema.cs" />
+    <Compile Include="Schema\ValidatorsFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Kuery\Providers\" />
+    <Folder Include="Schema\TableValidator\" />
     <Folder Include="UnitWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
