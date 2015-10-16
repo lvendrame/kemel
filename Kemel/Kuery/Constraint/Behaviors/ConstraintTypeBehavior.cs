@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kemel.Kuery.Constraint.Behaviors
 {
-    public class ConstraintTypeBehavior: ProviderContainer<IConstraintTypeProvider, ConstraintType>
+    public class ConstraintTypeBehavior: BehaviorProviderContainer<IConstraintTypeProvider, ConstraintType>
     {
         public ConstraintTypeBehavior(IConstraintTypeProvider constraintTypeProvider)
             : base(constraintTypeProvider)

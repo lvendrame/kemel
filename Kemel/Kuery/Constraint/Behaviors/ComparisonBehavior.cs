@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kemel.Kuery.Constraint.Behaviors
 {
-    public class ComparisonBehavior: ProviderContainer<IComparisonProvider, ComparisonOperator>
+    public class ComparisonBehavior: BehaviorProviderContainer<IComparisonProvider, ComparisonOperator>
     {
         public ComparisonBehavior(IComparisonProvider comparisonProvider)
             : base(comparisonProvider)

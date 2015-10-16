@@ -10,7 +10,10 @@ namespace Kemel.Base
     {
         Create,
         Read,
+        ReadById,
         Update,
-        Delete
+        UpdateById,
+        Delete,
+        DeleteById
     }
 }

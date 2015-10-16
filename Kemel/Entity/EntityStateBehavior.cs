@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kemel.Entity
 {
-    public class EntityStateBehavior: ProviderContainer<IEntityStateProvider, EntityState>
+    public class EntityStateBehavior: BehaviorProviderContainer<IEntityStateProvider, EntityState>
     {
         public EntityStateBehavior(IEntityStateProvider entityStateProvider)
             : base(entityStateProvider)

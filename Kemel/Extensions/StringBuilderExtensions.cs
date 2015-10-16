@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Kemel.Entity;
 using System.Data;
-using Kemel.Orm.Constants;
+using Kemel.Constants;
 using System.Reflection;
 using System.Xml.Serialization;
 using System.Xml;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kemel.Schema
 {
-    public class SchemaTypeBehavior : ProviderContainer<ISchemaTypeProvider, SchemaType>
+    public class SchemaTypeBehavior : BehaviorProviderContainer<ISchemaTypeProvider, SchemaType>
     {
         public SchemaTypeBehavior(ISchemaTypeProvider schemaTypeProvider)
             : base(schemaTypeProvider)

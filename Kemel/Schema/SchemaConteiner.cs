@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Kemel.Entity;
-using Kemel.Providers;
+using Kemel.DataProvider;
 
 namespace Kemel.Schema
 {

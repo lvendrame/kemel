@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kemel
 {
-    public abstract class ProviderContainer<T, E>
+    public abstract class BehaviorProviderContainer<T, E>
     {
         private T _provider;
 
@@ -15,7 +15,7 @@ namespace Kemel
             get { return _provider; }
         }
 
-        public ProviderContainer(T provider)
+        public BehaviorProviderContainer(T provider)
         {
             this._provider = provider;
         }

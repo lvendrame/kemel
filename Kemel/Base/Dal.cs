@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Kemel.Entity;
-using Kemel.Providers;
+using Kemel.DataProvider;
 using Kemel.Data;
 using Kemel.Schema;
-using Kemel.NQuery.Storage;
 
 namespace Kemel.Base
 {
     public class Dal<TEtt>: ITransactable
         where TEtt: EntityBase, new()
     {
-        private Provider prvCurrentProvider;
-        public Provider CurrentProvider
+        private IDataProvider prvCurrentProvider;
+        public IDataProvider CurrentProvider
         {
             get
             {
